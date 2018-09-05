@@ -1,45 +1,64 @@
 require_relative 'app_config'
 require_relative 'models/genre'
 require_relative 'models/track'
-require_relative 'models/book'
-require_relative 'models/author'
+# require_relative 'models/book'
+# require_relative 'models/author'
 
 AppConfig.establish_connection
 
-genres = Genre.where(name: 'Rock')
-
-# genres = Genre.all
+# genre = Genre.fifth
+# puts genre.Name
 
 # genres.map do |genre|
-#     puts genre.Name
-#     genre.sayHi
+#     puts genre.sayHello
+# end
+
+# genre = Genre.find_by(Name: 'Nima')
+# puts genre
+
+# genres = Genre.where(name: 'Rock')
+# puts genres.length
+
+# puts tracks.length
+
+# tracks = Track.count
+# puts tracks
+
+# tracks.map do |track|
+#     puts track.name
+#     puts track.lyrics
 # end
 
 # track = Track.find_by(name: 'Black Dog')
+# puts track.genre.Name
+
+
 # genre = track.genres
 
 # genre.sayHello
 
-# genres.map do |genre|
-#    genre.tracks.each do |track|
-#        puts track.name
-#        track.lyrics
-#    end
-# end
+# genres = Genre.where(Name: 'Bossa Nova')
+# genres is an array of GENRES
+# so each entry is A GENRE
 
 # song = Track.new
-# song.genre = genres[0] 
-# song.name = "Nima's Rock Song"
+# song.genre = genres[0] # THIS IS A GENRE OBJECT
+# song.name = "Nima's Bossa Nova Song"
 # song.save
 
-# newTrack = Track.new name: "New Genreless Song"#, genre: genres[0]
+# newTrack = Track.new name: "New Genreless Song" #, genre: genres[0]
+# newTrack.save
 
-# puts newTrack.save
-# song = Track.find_by(name: "Super Cool Song")
-# song.name = 'Hmmm'
-# song.save
+# song = Track.create! name: "Cool New Song 2" #, genre: genres[0]
 
-song = Track.new name: "Cool new song", genre: genres[0]
-puts song.save!
+# song.lyrics
 
-song.lyrics
+# genres = Genre.all
+# song  = Track.create name: "Super Cool Song", genre: genres[4]
+
+songs = Track.where(name: "Hmmm")
+
+songs.map do |song|
+    song.destroy
+end
+

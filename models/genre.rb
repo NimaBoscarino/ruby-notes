@@ -1,8 +1,8 @@
 class Genre < ActiveRecord::Base
     has_many :tracks
 
-    def sayHi
-        puts "hello!"
+    def sayHello
+        puts "What up!"
     end
 
 end

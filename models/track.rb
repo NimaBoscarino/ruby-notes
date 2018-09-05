@@ -2,22 +2,26 @@ class Track < ActiveRecord::Base
     belongs_to :genre
     validates :genre, presence: true
 
-    before_validation :make_uppercase
+    # before_validation :make_uppercase
 
-    after_save :send_email
+    # after_save :send_email
+    # def lyrics
+    #     puts "Macarena!"
+    # end
+
+    # private
+    #     def make_uppercase
+    #         puts "MAKING UPPERCASE"
+    #         self.name = self.name.upcase
+    #     end
+
+    #     def send_email 
+    #         nil
+    #     end
+
     def lyrics
-        puts "Macarena!"
+        puts "Macarena!!"
     end
-
-    private
-        def make_uppercase
-            puts "MAKING UPPERCASE"
-            self.name = self.name.upcase
-        end
-
-        def send_email 
-            nil
-        end
 
 end
 
@@ -26,14 +30,3 @@ end
 # helloSong = Track.new
 
 # helloSong.make_uppercase
-
-
-# WHERE ANNUAL REVENUE < 100000000, ALSO ONLY WOMENS APPAREL
-
-
-# Store.where(gender: women, a, as,d as,d as,d as,d, )
-
-# Store.where("annual_revenue < ?", 10000000)
-
-
-var = $()

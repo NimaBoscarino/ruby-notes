@@ -21,16 +21,3 @@ class User
         end
     end
 end
-
-# BREAD -> CRUD
-
-# CREATE
-# READ
-# UPDATE
-# DELETE/DESTROY
-
-# BROWSE -- done!
-# READ -- get One
-# EDIT -- update One / many
-# ADD -- done!
-# DELETE/DESTROY -- delete
