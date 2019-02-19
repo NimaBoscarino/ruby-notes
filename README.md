@@ -1,6 +1,10 @@
 ## More Ruby and OOP
 
-Here is a gist with the code we worked with today: https://gist.github.com/NimaBoscarino/635de50b054ed899d946f66d96ba2f69
+### OOPs I did it again
+
+For today's code, check the `jan-07-lecture` folder in this repo: https://github.com/NimaBoscarino/ruby-notes
+
+There are a bunch of other little demos in the other folders.
 
 Also, I suggest reading through this (and the other related Rails docs): http://guides.rubyonrails.org/active_record_basics.html
 
