@@ -1,9 +1,19 @@
 require_relative 'app_config'
 
-newGirl = Show.create :name => 'New Girl' # , :start_date => '2012'
-alwaysSunny = Show.create :name => "It's Always Sunny In Philadelphia" # , :start_date => '2012'
-russianDoll = Show.create :name => 'Russian Doll' # , :start_date => '2012'
-umbrellaAcademy = Show.create :name => 'Umbrella Academy' # , :start_date => '2012'
+fxx = Network.create :name => 'FXX'
+fox = Network.create :name => 'Fox'
+netflix = Network.create :name => 'Netflix'
+hbo = Network.create :name => 'HBO'
+nimaTV = Network.create :name => 'nimaTV'
+
+newGirl = Show.create! :name => 'New Girl', :network => fox # , :start_date => '2012'
+alwaysSunny = Show.create! :name => "It's Always Sunny In Philadelphia", :network => fox # , :start_date => '2012'
+russianDoll = Show.create! :name => 'Russian Doll', :network => netflix
+umbrellaAcademy = Show.create! :name => 'Umbrella Academy', :network => netflix # , :start_date => '2012'
+got = Show.create! :name => 'Game of Thrones', :network => hbo
+
+nimaLive = Show.create! :name => 'Nima Live', :network => nimaTV
+
 
 zooey = Actor.create :name => "Zooey Deschanel", :role => "Jessica Day", :show => newGirl
 
@@ -38,3 +48,16 @@ zooey = Actor.find_by(name: "Zooey Deschanel")
 zooey.sayTagline
 
 puts Show.find_by(name: 'New Girl').actors
+
+
+# alwaysSunny.network = fxx
+
+# puts alwaysSunny.network
+
+# alwaysSunny.save
+
+# start a REPL session
+binding.pry
+
+# program resumes here (after pry session)
+puts "program resumes here."
