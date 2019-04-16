@@ -2,7 +2,7 @@
 
 ### OOPs I did it again
 
-For today's code, check the `lecture` folder in this repo: https://github.com/NimaBoscarino/ruby-notes
+For today's code, check the `jan-07-lecture` folder in this repo: https://github.com/NimaBoscarino/ruby-notes
 
 There are a bunch of other little demos in the other folders.
 

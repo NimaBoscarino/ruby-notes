@@ -21,24 +21,24 @@ puts 'CONNECTED'
 
 puts 'Setting up Database (recreating tables) ...'
 
-## define the schema of the database
+# define the schema of the database
 
 ActiveRecord::Schema.define do
   drop_table :shows if ActiveRecord::Base.connection.table_exists?(:shows)
   drop_table :actors if ActiveRecord::Base.connection.table_exists?(:actors)
   
   create_table :shows do |t|
-    t.column :name, :string
+    t.column :name, :string # table.makeColumn(colName, colType)
     t.timestamps null: false
+    # t.references :network
   end
 
   create_table :actors do |t|
-    t.references :show
+    t.references :show # show_id
     t.column :name, :string
     t.column :role, :string
     t.timestamps null: false
   end
-
 end
 
 puts 'Setup DONE'
