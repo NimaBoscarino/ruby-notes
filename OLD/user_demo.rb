@@ -9,8 +9,16 @@ class User
         @pw = pw
     end
 
+    def save()
+        pg.runQuery `INSERT ... INTO...`
+    end
+
     def wave
         puts "#{@username} says hello"
+    end
+
+    def getFriends
+        # query to get all friends, and return them as User objects
     end
 
     def self.all
@@ -21,3 +29,32 @@ class User
         end
     end
 end
+
+tim = User.new 'tim'
+tim.wave
+
+tim.save
+
+User.all
+
+
+
+class Post
+    attr_accessor :creation_date, :user
+
+    def initialize
+    end
+
+    def saveAsDraft
+
+    end
+
+    def commentOn
+
+    end
+end
+
+jim = User.findByName 'jim'
+jim.getPosts
+
+post.getUser

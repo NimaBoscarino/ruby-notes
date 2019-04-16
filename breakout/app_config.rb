@@ -1,4 +1,3 @@
-require 'pry' # in case you want to use binding.pry
 require 'active_record'
 require_relative 'models/show'
 require_relative 'models/actor'
@@ -31,9 +30,9 @@ ActiveRecord::Schema.define do
   drop_table :networks if ActiveRecord::Base.connection.table_exists?(:networks)
   
   create_table :shows do |t|
-    t.references :network
     t.column :name, :string
     t.timestamps null: false
+    t.references :network
   end
 
   create_table :actors do |t|
