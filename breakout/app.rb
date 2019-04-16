@@ -16,7 +16,7 @@ umbrellaAcademy = Show.create! :name => 'Umbrella Academy', :network => netflix
 
 zooey = Actor.create! :name => "Zooey Deschanel", :role => "Jessica Day", :show_id => newGirl.id
 
-schmidt = Actor.create!(name: "Max Greenfield", role: "Winston Schmid", show_id: newGirl.id)
+schmidt = Actor.create! name: "Max Greenfield", role: "Winston Schmid", show_id: newGirl.id
 
 charlie = Actor.create! :name => "Charlie Day", :role => "Charlie Kelly", :show_id => alwaysSunny.id
 
