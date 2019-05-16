@@ -1,5 +1,6 @@
 class Network < ActiveRecord::Base
   has_many :shows, dependent: :destroy
+  has_many :actors, through: :shows
 
   before_validation :capitalize_name
 

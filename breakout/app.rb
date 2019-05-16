@@ -51,9 +51,14 @@ puts secondActorsShow.name
 
 # charlie.destroy
 
-
 puts netflix.shows
 
-fox.destroy!
+foxActors = fox.actors
+
+# Print out the names of the foxActors!
+
+puts foxActors.map { |actor| actor.name }
+
+fox.destroy!  # This destroys fox, and all fox shows... but leaves the actors! Hmm... what would we do to also drop the actors?
 
 # puts netflix.shows
